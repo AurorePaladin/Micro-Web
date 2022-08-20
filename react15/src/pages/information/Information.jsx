@@ -5,6 +5,9 @@ import './Information.scss'
 // 添加资讯页面导航内容
 import InformationNav from './components/tab/index.jsx'
 
+// 资讯页面列表内容
+import InformationList from './components/list/index.jsx'
+
 class Information extends React.Component {
   constructor(props) {
     super(props)
@@ -24,6 +27,8 @@ class Information extends React.Component {
           <div className="information-wrapper">
             {/* 资讯tab */}
             <InformationNav />
+            {/* 资讯的列表内容 */}
+            <InformationList />
           </div>
         </div>
       </div>
