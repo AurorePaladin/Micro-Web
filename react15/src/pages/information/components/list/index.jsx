@@ -1,6 +1,9 @@
 import React from 'react'
 import './index.scss'
 import axios from 'axios'
+// 列表元素
+import InformationItem from '../item/index.jsx'
+
 
 class InformationList extends React.Component {
   constructor(props) {
@@ -36,7 +39,13 @@ class InformationList extends React.Component {
     const { list, page, limit, total } = this.state
     return (
       <div className="information-list-container">
-        {/* todolist */}
+        {
+          list.map((item, index) => {
+            return (
+              <InformationItem data={item} setItem={() => this.setItem()}/>
+            )
+          })
+        }
       </div>
     )
   }
