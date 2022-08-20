@@ -4,6 +4,8 @@ import axios from 'axios'
 // 列表元素
 import InformationItem from '../item/index.jsx'
 
+// 分页组件
+import InformationPagination from '../pagination/index.jsx';
 
 class InformationList extends React.Component {
   constructor(props) {
@@ -45,6 +47,18 @@ class InformationList extends React.Component {
               <InformationItem data={item} setItem={() => this.setItem()}/>
             )
           })
+        }
+
+        {/* 分页组件 */}
+        {
+          noPagination ? <div> </div> : <InformationPagination
+            data={{
+              page,
+              limit,
+              total
+            }}
+            setPage={(page) => this.setPage(page)}
+          />
         }
       </div>
     )
