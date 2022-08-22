@@ -8,6 +8,9 @@ import InformationNav from './components/tab/index.jsx'
 // 资讯页面列表内容
 import InformationList from './components/list/index.jsx'
 
+// 右侧新闻内容
+import InformationNews from './components/news/index.jsx'
+
 class Information extends React.Component {
   constructor(props) {
     super(props)
@@ -29,6 +32,11 @@ class Information extends React.Component {
             <InformationNav />
             {/* 资讯的列表内容 */}
             <InformationList />
+          </div>
+
+          {/* 右侧新闻区 */}
+          <div className='information-news'>
+            <InformationNews />
           </div>
         </div>
       </div>
