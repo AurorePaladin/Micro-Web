@@ -8,6 +8,8 @@ import NoStar from '../../../../assets/no-star.png'
 import HoverStar from '../../../../assets/hover-star.png'
 import Stared from '../../../../assets/stared.png'
 
+// 评论组件
+import InformationLastComments from '../comments/index.jsx';
 class InformationLastWrapper extends React.Component {
   constructor(props) {
     super(props)
@@ -55,6 +57,10 @@ class InformationLastWrapper extends React.Component {
         <div>
           { this.props.children }
         </div>
+
+        {/* 评论内容 */}
+        <InformationLastComments />
+
       </div>
     )
   }
