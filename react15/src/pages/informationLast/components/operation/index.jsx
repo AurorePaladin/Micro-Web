@@ -8,12 +8,7 @@ import NoStar from '../../../../assets/no-star.png'
 import HoverStar from '../../../../assets/hover-star.png'
 import Stared from '../../../../assets/stared.png'
 
-// 评论组件
-import InformationLastComments from '../comments/index.jsx';
-
-// 点赞内容
-import InformationOperation from '../operation/index.jsx'
-class InformationLastWrapper extends React.Component {
+class InformationOperation extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -46,29 +41,32 @@ class InformationLastWrapper extends React.Component {
   render() {
     const { title, praise, praiseHover, starHover, star, praiseNumber } = this.state
     return (
-      <div className="last-article-container">
-        <div className="last-article-title">
-          { title }
+      <div className="last-article-operation">
+        <div
+          onMouseEnter={() => this.hoverPraised('praiseHover', true)}
+          onMouseLeave={() => this.hoverPraised('praiseHover', false)}
+          onClick={() => this.praised() }
+          className={praise ? 'last-article-praised' : praiseHover ? 'last-article-praise-hover' : ''}
+        >
+          <img src={
+            praise ? Praised : praiseHover ? HoverPraise : NoPraise
+          } alt=""/>
+          赞{praiseNumber}
         </div>
-        {/* 作者内容 */}
-        <div className="last-article-author">
-          <span>原创</span>
-          <span>谁谁谁</span>
-          <span>2010-05-20 00:00:00</span>
+        <div
+          onMouseEnter={() => this.hoverPraised('starHover', true)}
+          onMouseLeave={() => this.hoverPraised('starHover', false)}
+          onClick={() => this.stared() }
+          className={star ? 'last-article-stared' : starHover ? 'last-article-star-hover' : ''}
+        >
+          <img src={
+            star ? Stared : starHover ? HoverStar : NoStar
+          } alt=""/>
+          { star ? '已' : '' }收藏
         </div>
-        {/* 文章内容 */}
-        <div>
-          { this.props.children }
-        </div>
-
-        {/* 点赞内容 */}
-        <InformationOperation />
-        {/* 评论内容 */}
-        <InformationLastComments />
-
       </div>
     )
   }
 }
 
-export default InformationLastWrapper
+export default InformationOperation
