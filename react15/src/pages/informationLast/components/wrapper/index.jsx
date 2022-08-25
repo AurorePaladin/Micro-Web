@@ -13,6 +13,9 @@ import InformationLastComments from '../comments/index.jsx';
 
 // 点赞内容
 import InformationOperation from '../operation/index.jsx'
+
+// 评论列表
+import InformationLastCommentsList from '../commentsList/index.jsx';
 class InformationLastWrapper extends React.Component {
   constructor(props) {
     super(props)
@@ -65,7 +68,8 @@ class InformationLastWrapper extends React.Component {
         <InformationOperation />
         {/* 评论内容 */}
         <InformationLastComments />
-
+        {/* 评论列表 */}
+        <InformationLastCommentsList />
       </div>
     )
   }
