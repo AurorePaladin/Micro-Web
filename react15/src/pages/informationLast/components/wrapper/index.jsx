@@ -16,6 +16,9 @@ import InformationOperation from '../operation/index.jsx'
 
 // 评论列表
 import InformationLastCommentsList from '../commentsList/index.jsx';
+
+// 相关资讯
+import InformationLastRelevant from '../relevant/index.jsx';
 class InformationLastWrapper extends React.Component {
   constructor(props) {
     super(props)
@@ -70,6 +73,8 @@ class InformationLastWrapper extends React.Component {
         <InformationLastComments />
         {/* 评论列表 */}
         <InformationLastCommentsList />
+        {/* 相关资讯 */}
+        <InformationLastRelevant />
       </div>
     )
   }
