@@ -5,6 +5,11 @@ import './index.scss'
 // 资讯文章
 import InformationLastArticle from './components/article/index.jsx';
 
+// 热门推荐
+import InformationRecommend from '../information/components/recommended/index.jsx';
+
+// 车辆信息
+import InformationLastCar from './components/car/index.jsx';
 class InformationLast extends React.Component {
   constructor(props) {
     super(props)
@@ -24,6 +29,14 @@ class InformationLast extends React.Component {
           <div className="information-last-wrapper">
             {/* 资讯文章 */}
             <InformationLastArticle />
+          </div>
+          {/* 右侧新闻 */}
+          <div className="information-last-news">
+            {/* 车辆信息 */}
+            <InformationLastCar />
+
+            {/* 热门推荐 */}
+            <InformationRecommend />
           </div>
         </div>
       </div>
