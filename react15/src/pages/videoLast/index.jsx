@@ -8,6 +8,7 @@ import InformationLastCommentsList from '../informationLast/components/commentsL
 import InformationLastRelevant from '../informationLast/components/relevant/index.jsx';
 import InformationLastCar from '../informationLast/components/car/index.jsx';
 
+import VideoDetail from './components/videoDetail/index.jsx';
 class VideoLast extends React.Component {
   constructor(props) {
     super(props)
@@ -26,7 +27,9 @@ class VideoLast extends React.Component {
       <div className="video-last-container">
         <div className="video-last-content">
           <div className='video-last-wrapper'>
-           
+            {/* 视频内容 */}
+            <VideoDetail />
+
             {/* 点赞内容 */}
             <InformationOperation />
 
