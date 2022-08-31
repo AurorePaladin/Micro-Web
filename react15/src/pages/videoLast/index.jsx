@@ -9,6 +9,8 @@ import InformationLastRelevant from '../informationLast/components/relevant/inde
 import InformationLastCar from '../informationLast/components/car/index.jsx';
 
 import VideoDetail from './components/videoDetail/index.jsx';
+import HotVideo from './components/hotVideo/index.jsx';
+
 class VideoLast extends React.Component {
   constructor(props) {
     super(props)
@@ -45,6 +47,7 @@ class VideoLast extends React.Component {
 
           <div className="video-last-news">
             <InformationLastCar />
+            <HotVideo />
           </div>
         </div>
       </div>
